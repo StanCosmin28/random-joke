@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  /* background-color: #fab22e; */
+  /* background-color: #b9d532; */
+  width: 100vw;
+  height: 100vh;
+  background: rgb(7, 48, 2);
+  background: linear-gradient(
+    0deg,
+    rgb(5, 34, 1) 0%,
+    rgba(185, 213, 50, 1) 100%
+  );
+}
+.wrapper {
+  width: 80vmin;
+  padding: 40px 40px;
+  background-color: #15161a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  /* box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4); */
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+  animation: box linear 4s infinite alternate;
+}
+@keyframes box {
+  50% {
+    scale: 102%;
+  }
+}
+span {
+  display: block;
+  text-align: center;
+  font-size: 100px;
+}
+p {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 35px;
+  margin: 40px 0;
+  opacity: 0;
+}
+.fade {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.btns button {
+  display: block;
+  /* background-color: #fab22e; */
+  background-color: #b9d532;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  color: #171721;
+  font-weight: 600;
+  padding: 12px 25px;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .btns {
+    flex-direction: column;
+  }
+}
+#logo {
+  width: 100%;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* flex-direction: column;
+  text-align: center; */
+}
+#logo img {
+  height: 100%;
+  width: 30px;
+  transition: 0.8s;
+}
+/* #logo::after {
+  font-size: 12px;
+  color: white;
+  content: "STANC";
+} */
+#logo img:hover {
+  scale: 120%;
+  transition: 0.8s;
+}
