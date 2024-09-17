@@ -7,7 +7,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: rgb(7, 48, 2);
+  /* background: rgb(7, 48, 2); */
   background: linear-gradient(
     0deg,
     rgb(5, 34, 1) 0%,
