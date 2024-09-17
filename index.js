@@ -1,17 +1,17 @@
-const jokeContainer = document.getElementById("joke");
-const btn = document.getElementById("btn");
-const emoji = document.getElementById("emoji");
 const url =
   "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
-const btnPrev = document.getElementById("btn0");
+const jokeContainer = document.getElementById("joke");
 const btnEmoji = document.getElementById("btn2");
+const btnPrev = document.getElementById("btn0");
+const emoji = document.getElementById("emoji");
+const btn = document.getElementById("btn");
 let previewsJoke = "";
 let previewsEmoji = "";
-// const maxHistory = 3;
+//Generate Random Number for Emoji Code
 const randomEmoji = () => {
   return Math.floor(Math.random() * (300 - 100) + 100);
 };
-// console.log(randomEmoji());
+// Get the Joke from the Back-End to the Front-End
 const getJoke = () => {
   jokeContainer.classList.remove("fade");
 
@@ -23,16 +23,15 @@ const getJoke = () => {
       emoji.innerHTML = `&#128${randomEmoji()}`;
       jokeContainer.textContent = `${item.joke}`;
       jokeContainer.classList.add("fade");
-      //   console.log(previewsJoke);
     });
 };
-
 getJoke();
 
+//Change Emoji Button
 const changeEmoji = () => {
   emoji.innerHTML = `&#128${randomEmoji()}`;
 };
-
+//Show Previews Joke Button
 const showPreviousJokeEmoji = () => {
   if (previousJoke) {
     jokeContainer.textContent = previousJoke;
@@ -41,7 +40,7 @@ const showPreviousJokeEmoji = () => {
     previousJoke = ""; // Resetează pentru a nu reveni la acea glumă din nou
   }
 };
-
+//Events Listeners
 btn.addEventListener("click", getJoke);
 btnPrev.addEventListener("click", showPreviousJokeEmoji);
 btnEmoji.addEventListener("click", changeEmoji);
