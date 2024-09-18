@@ -87,6 +87,11 @@ p {
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+  transition: 0.5s;
+}
+.btns button:hover {
+  scale: 105%;
+  transition: 0.5s;
 }
 #logo {
   width: 100%;
@@ -97,7 +102,7 @@ p {
 #logo img {
   height: 100%;
   width: 30px;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 /* #logo::after {
   font-size: 12px;
@@ -106,7 +111,7 @@ p {
 } */
 #logo img:hover {
   scale: 120%;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 600px) {
   .btns {
