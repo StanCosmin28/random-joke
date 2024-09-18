@@ -14,23 +14,40 @@ body {
     rgba(185, 213, 50, 1) 100%
   );
 }
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .wrapper {
   width: 80vmin;
   padding: 40px 40px;
   background-color: #15161a;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  /* top: 50%; */
+  /* left: 50%; */
   border-radius: 5px;
   box-shadow: 0px 0px 50px rgb(0, 0, 0);
-  animation: box linear 4s infinite alternate;
+  animation: box1 linear 3s infinite alternate;
+  /* animation: box2 linear 4s infinite alternate; */
 }
-@keyframes box {
-  50% {
+@keyframes box1 {
+  0% {
     scale: 102%;
   }
+  100% {
+    transform: translateY(-10px);
+  }
 }
+/* @keyframes box2 {
+  50% {
+    transform: translateY(20px);
+  }
+} */
 span {
   display: block;
   text-align: center;
